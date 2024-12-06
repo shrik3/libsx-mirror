@@ -1,0 +1,33 @@
+#
+#
+include ../libsx_defs
+
+# the object files which the program depends on
+OBJS       = main.o callbacks.o
+
+all : test hello_world demo demo0
+
+test: test.c
+	$(CC) test.c -o test $(LIBS)
+
+hello_world: hello_world.c
+	$(CC) hello_world.c -o hello_world $(LIBS)
+
+demo : $(OBJS)
+	$(CC) -o demo $(OBJS) $(LIBS)
+
+demo0 : main0.o
+	$(CC) -o demo0  main0.o $(LIBS)
+
+
+# main.o depends on main.c (of course) and main.h and callbacks.h
+main.o : main.c main.h callbacks.h
+
+callbacks.o : callbacks.c main.h
+
+
+#
+# A cleanup target.  Type `make clean' to remove all the junk.
+#
+clean :
+	rm -f *.o *~ core test hello_world demo demo0

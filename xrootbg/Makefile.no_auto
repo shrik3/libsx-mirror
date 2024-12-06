@@ -1,0 +1,22 @@
+#
+#
+XAWLIB=Xaw3dxft
+# XAWLIB=Xaw
+include ../libsx_defs
+CFLAGS = -Wall -O2 -D_POSIX_SOURCE -DXAW_ARROW_SCROLLBARS -DXAW_INTERNATIONALIZATION -D$(XAWLIB) -I/usr/include/freetype2
+
+
+OBJS       = xrootbg.o
+
+all : xrootbg
+
+xrootbg : $(OBJS) 
+	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBS) -lm -lXft
+
+xrootbg.o : xrootbg.c
+
+install:
+	install -c -s xrootbg /usr/bin
+
+clean:
+	rm -f *.o *~ core xrootbg

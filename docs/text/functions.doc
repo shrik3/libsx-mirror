@@ -1,0 +1,138 @@
+Libsx Functions
+
+
+Listing of various Categories of Functions
+
+	Buttons			button.doc
+	Color			color.doc
+	Drawing	Area		draw_area.doc
+	Drawing			drawing.doc
+	Fonts			font.doc
+	Forms			form.doc
+	Labels			label.doc
+	Lists			list.doc
+	Menus			menu.doc
+	Miscellaneous Functions	misc.doc
+	Popup Windows		popups.doc
+	Scrollbar		scrollbar.doc
+	String Entry		string_entry.doc
+	Text Editing		text_edit.doc
+	Toggles			toggle.doc
+	Windows			windows.doc
+
+
+Alphabetical Listing of Functions
+
+	AddTimeOut		misc.doc
+	AttachEdge		misc.doc
+
+	Beep			misc.doc
+
+	ChangeScrollList	list.doc
+	ClearDisplay		drawing.doc
+	CloseProcedure		windows.doc
+	CloseWindow		windows.doc
+
+	DrawPixel		drawing.doc
+	DrawLine		drawing.doc
+	DrawPolyline		drawing.doc
+	DrawFilledPolygon	drawing.doc
+	DrawBox			drawing.doc
+	DrawFilledBox		drawing.doc
+	DrawText		drawing.doc
+	DrawArc			drawing.doc
+	DrawFilledArc		drawing.doc
+	DrawImage		drawing.doc
+
+	FontHeight		font.doc
+	FreeAllColors		color.doc
+	FreeFont		font.doc
+	FreePrivateColor	color.doc
+
+	GetAllColors		color.doc
+	GetBgColor		misc.doc
+	GetCurrentListItem	list.doc
+	GetDrawAreaSize		drawing.doc
+	GetFgColor		misc.doc
+	GetFile			popups.doc
+	GetFont			font.doc
+	GetImage		drawing.doc
+	GetLongString		popups.doc
+	GetMenuItemChecked	menu.doc
+	GetNamedColor		color.doc
+	GetOkay			popups.doc
+	GetPixel		drawing.doc
+	GetRGBColor		color.doc
+	GetPrivateColor		color.doc
+	GetStandardColors	color.doc
+	GetString		popups.doc
+	GetStringEntry		string_entry.doc
+	GetText			popups.doc
+	GetTextWidgetText	text_edit.doc
+	GetToggleState		toggle.doc
+	GetTopWidget		windows.doc
+	GetTriState		popups.doc
+	GetWidgetFont		font.doc
+	GetWidgetState		misc.doc
+	GetYesNo		popups.doc
+
+	MainLoop		windows.doc
+	MakeButton		button.doc
+	MakeDrawArea		draw_area.doc
+	MakeForm		form.doc
+	MakeHorizScrollbar	scrollbar.doc
+	MakeLabel		label.doc
+	MakeMenu		menu.doc
+	MakeMenuItem		menu.doc
+	MakeScrollList		list.doc
+	MakeStringEntry		string_entry.doc
+	MakeTextWidget		text_edit.doc
+	MakeToggle		toggle.doc
+	MakeVertScrollbar	scrollbar.doc
+	MakeWindow		windows.doc
+
+	OpenDisplay		windows.doc
+
+        ReadLocale              misc.doc
+
+	ScrollDrawArea		drawing.doc
+	SelectColor		color.doc
+	SetBgColor		misc.doc
+	SetBorderColor		misc.doc
+	SetButtonDownCB		draw_area.doc
+	SetButtonUpCB		draw_area.doc
+	SetColor		drawing.doc
+	SetColorMap		color.doc
+	SetCurrentListItem	list.doc
+	SetCurrentWindow	windows.doc
+	SetDrawArea		drawing.doc
+	SetDrawMode		drawing.doc
+	SetEnterCB		draw_area.doc
+	SetFgColor		misc.doc
+	SetForm			form.doc
+	SetFreqFilter		popups.doc
+	SetKeypressCB		draw_area.doc
+	SetLabel		label.doc
+	SetLeaveCB		draw_area.doc
+	SetLineWidth		drawing.doc
+	SetMenuItemChecked	menu.doc
+	SetMouseMotionCB	draw_area.doc
+	SetMyColorMap		color.doc
+	SetPrivateColor		color.doc
+	SetScrollbar		scrollbar.doc
+	SetScrollbarDirection	scrollbar.doc
+	SetScrollbarStep	scrollbar.doc
+	SetStringEntry		string_entry.doc
+	SetTextWidgetText	text_edit.doc
+	SetThumbBitmap		scrollbar.doc
+	SetToggleState		toggle.doc
+	SetWidgetFont		font.doc
+	SetWidgetBitmap		misc.doc
+	SetWidgetPixmap		misc.doc
+	SetWidgetPos		misc.doc
+	SetWidgetState		misc.doc
+	ShowDisplay		windows.doc
+	SyncDisplay		windows.doc
+
+	TextWidth		font.doc
+	

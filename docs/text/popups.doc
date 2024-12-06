@@ -1,0 +1,86 @@
+Popup windows are simple dialog boxes that get a simple yes/no or
+string/text answer from the user.  When these windows popup, they block
+input to the previously active window.
+
+
+-----------------------------------------------------------
+
+int GetYesNo(char *question);
+
+This function allows you to prompt the user for the answer to a simple
+yes or no type of question.  It simply pops up a dialog box with the
+text contained in the string question, and two okay/cancel buttons.
+
+If the user clicks Okay, this function returns TRUE.  If the user
+clicks Cancel, this function returns FALSE.  The text in the question
+string can have embedded newlines (\n characters) to break things up
+or to add spacing.
+
+
+SEE ALSO : GetString(), GetText()
+-----------------------------------------------------------
+
+char *GetString(char *msg, char *default);
+
+This function allows you to prompt the user for a string of input.
+The first argument, msg, is a pointer to a string which will be
+displayed in the dialog box.  The next argument, default, is the
+default string to place in the text string box (it can be NULL or ""). 
+The last argument is the width of the dialog box.
+
+When you call this function, it pops up a small dialog box on the
+screen, and the user can enter the line of text.  When the user clicks
+ok or cancel, the function returns a pointer to the string of text the
+user entered.
+
+If the user clicks cancel, you get a NULL return value.
+
+SEE ALSO : GetYesNo(), GetText()
+-----------------------------------------------------------
+
+char *GetLongString(char *msg, char *default, int width);
+
+
+Similar to GetString(), but with an additional parameter width
+contolling the width of the input box.
+
+SEE ALSO : GetYesNo(), GetString(), GetText()
+----------------------------------------------------------------
+
+char *GetText(char *msg, char *default, int width, int height);
+
+Quite similar to GetString(), but the dialog box is replaced by
+an editable window of dimensions width x height, which scrolls
+in both vertical and horizontal directions.
+
+SEE ALSO : GetYesNo(), GetText()
+-----------------------------------------------------------
+
+char *GetFile(char info_label, char file_or_dir_name, FreqCB func, void *data)
+
+This is the API call to the File Requestor, which allows you to
+browse files from a directory or filesystem. The initial directory is 
+set to be the directory file_or_dir_name -- or the directory containing
+that file if it is not a directory. The top information label is set
+to be info_label, usually some information to be passed to users.
+If the callback function (FreqCB) func is not NULL, a double click
+on an item in the scroll list allows 'func' to be executed without
+quitting the File Requestor. The syntax for the callback function is
+
+void func(Widget w, char *dir_name, char *file_name, void *data)
+
+where dir_name and file_name are set to the values selected with the 
+File Requestor.
+
+SEE ALSO: SetFreqFilter()
+-----------------------------------------------------------
+
+void SetFreqFilter(char *filter)
+
+Sets the "filter" to be used in the GetFile() procedure. The default
+filter is "*", which lets all files be listed in the file requestor. 
+If filter is set to "*.txt", then only files possessing a .txt suffix
+will be listed. An arbitrary number of wild card characters '*' can be
+used.  The length of filter cannot exceed 80 characters in total.
+
+SEE ALSO: GetFile()

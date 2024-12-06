@@ -1,0 +1,9 @@
+#
+#
+include ../libsx_defs
+
+frac : frac.o
+	$(CC) -o frac frac.o $(LIBS)
+
+clean :
+	rm -f *.o *~ core frac

@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: @PACKAGE@
+Description: Simple X library to make writing X applications easier
+Version: @VERSION@
+Libs: -L${libdir} -lsx
+@pkgconfig_X_libs@
+Cflags: -I${includedir}
+

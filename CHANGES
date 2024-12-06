@@ -1,0 +1,25 @@
+Early versions of libsx have been released around 1993 by Dominic Giampaolo
+(dbg@sgi.com), using also code provided by Allen Martin (amartin@wpi.wpi.edu).
+
+The present release includes an html documentation produced by
+Stephen Chenney (stephen@cs.su.oz.au) and Winston Holmes 
+(winston@nestor.engr.utk.edu), and some useful additional routines 
+(pixmap buttons, file selector, color selector, internationalization). 
+
+Libsx-2.08 should be mostly API compatible with earlier versions -- at least 
+as much as libsx-1.1 was with libsx-1.0. These modifications have been
+made step by step over a period of 20 years 1998-2017 ...
+
+The first widely announced public release of version 2 was 2.03. 
+Version 2.0x, especially, include an internationalization routine. 
+To produce dialogs for a new language, it is only needed to translate 
+the (20 lines) file  src/dialogs/dialogs.XX where XX is the country code.
+
+Many thanks to Walter Harms for contributing docs in the form of man pages,
+and for pointing out a few inaccuracies (this was around 2004).
+
+Jean-Pierre Demailly
+Universit\'e de Grenoble I
+February 26, 2017
+jean-pierre.demailly@univ-grenoble-alpes.fr
+

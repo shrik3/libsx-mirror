@@ -1,0 +1,76 @@
+#
+# Top level makefile for libsx and all the example code.
+#
+# Basically we just cd into each of the directories and build
+# the stuff that's there.
+#
+# I know I've committed a major sin by not using imake to generate
+# the makefiles, but I've never quite understood that beast and it seems
+# overly complicated to me (but then again I never put tons of effort
+# into understanding it).  If someone would like to explain it to me,
+# I'd like that (or point to some simple to read documentation).
+#
+# Dominic Giampaolo
+# dbg@sgi.com
+# 
+
+SHELL=/bin/sh
+DIRS = src demo0 demo1 demo2 demo3 demo4 bezier controlbox creq frac \
+       freq multireq skel xmore xrootbg draw_demo controlbox
+
+all : $(DIRS)
+
+src::
+	(cd src ; $(MAKE) -f Makefile.no_auto )
+
+demo0::
+	(cd demo0 ; $(MAKE) -f Makefile.no_auto )
+
+demo1::
+	(cd demo1 ; $(MAKE) -f Makefile.no_auto )
+
+demo2::
+	(cd demo2 ; $(MAKE) -f Makefile.no_auto )
+
+demo3::
+	(cd demo3 ; $(MAKE) -f Makefile.no_auto )
+
+demo4::
+	(cd demo4 ; $(MAKE) -f Makefile.no_auto )
+
+bezier::
+	(cd bezier ; $(MAKE) -f Makefile.no_auto )
+
+controlbox::
+	(cd controlbox ; $(MAKE) -f Makefile.no_auto )
+
+creq::
+	(cd creq ; $(MAKE) -f Makefile.no_auto )
+
+frac::
+	(cd frac ; $(MAKE) -f Makefile.no_auto )
+
+freq::
+	(cd freq ; $(MAKE) -f Makefile.no_auto )
+
+multireq::
+	(cd multireq ; $(MAKE) -f Makefile.no_auto )
+
+skel::
+	(cd skel ; $(MAKE) -f Makefile.no_auto )
+
+xmore::
+	(cd xmore ; $(MAKE) -f Makefile.no_auto )
+
+xrootbg::
+	(cd xrootbg ; $(MAKE) -f Makefile.no_auto )
+
+draw_demo::
+	(cd draw_demo ; $(MAKE) -f Makefile.no_auto )
+
+
+clean :
+	rm -f core *~
+	for dir in $(DIRS);  do               \
+	   cd $$dir ; make -f Makefile.no_auto clean ; cd ..;     \
+	done;

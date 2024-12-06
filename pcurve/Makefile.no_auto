@@ -1,0 +1,20 @@
+include ../libsx_defs
+
+CFLAGS	= -g -I../controlbox
+
+CLIBS	= -lGLU -lGL -lXaw3dxft -lXt -lXmu -lX11 -lm
+LDFLAGS = $(LIBPATH) $(LIBS) $(CLIBS)
+
+OBJS = fogl.o cfogl.o
+OTHEROBJS = controlbox.o
+
+default: $(OTHEROBJS) pcurve
+
+controlbox.o: ../controlbox/controlbox.c
+	gcc -c $(CFLAGS) ../controlbox/controlbox.c -o controlbox.o
+
+clean:
+	rm -f $(OBJS) pcurve controlbox.o
+
+pcurve:	pcurve.c $(OTHEROBJS)
+	gcc $(CFLAGS) pcurve.c -o pcurve $(OTHEROBJS) $(LDFLAGS)

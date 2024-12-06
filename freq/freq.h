@@ -1,0 +1,1 @@
+char *SimpleGetFile(char *path);

@@ -1,0 +1,17 @@
+This file contains tidbits of related information that you might find
+useful. 
+
+
+-- Check out the Xaw3d library available on ftp.x.org in the
+   contrib/widgets/Xaw3d directory.  Without any changes to your source
+   code you can get a nice 3D  motif-ish look to your application.  All
+   you have to do is link with -lXaw3d instead of -lXaw, and poof, all
+   your widgets now have a nice 3D look to them.  
+
+-- The Xaw95 library can also be used, if you insist to imitate that other 
+   commercial operating system. I hate to say it, but this is definitely
+   what gives the best look to the libsx widgets !
+
+-- If you want to get dialogs in some other languages than English,
+   French or German, supply a suitable dialog.XX file in src/dialogs, eg. 
+   dialogs.fi for Finnish.
